@@ -1,0 +1,136 @@
+/* Page Font */
+@font-face {
+    font-family: Kumbh;
+    src: url(KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
+/* ===================================================================== */
+
+/* Root variables*/
+:root {
+    /* colors */
+    --clr-page-background: hsl(185, 75%, 39%);
+    --clr-title: hsl(229, 23%, 23%);
+    --clr-stats: hsl(227, 10%, 46%);
+    --clr-line: hsla(0, 0%, 59%, 0.377);
+
+    /* font weight */
+    --fw-small: 400;
+    --fw-big: 700;
+}
+
+/* ====================================================================== */
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+	padding: 0;
+	-moz-box-sizing-: border box;
+	-webkit-box-sizing-: border box;
+	box-sizing: border box;
+	word-wrap: break-word;
+}
+
+img {
+	min-width: 100%;
+	display: block;
+}
+
+/* ========================================================================= */
+
+/* main */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background: var(--clr-page-background);
+    background-image: url(bg-pattern-top.svg), url(bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+    color: var(--clr-stats);
+
+    font-size: 18px;
+    font-weight: var(--fw-small);
+    font-family: kumbh;
+}
+
+.name,
+.value {
+    color: var(--clr-title);
+    font-weight: var(--fw-big);
+}
+
+/* ============================================================================ */
+
+/* Containers */
+.container {
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.397);
+}
+
+.sub_container {
+    background: #fff;
+}
+
+/* ====================================================================== */
+
+.image_container {
+    width: 30%;
+    position: absolute;
+    top: 5rem;
+    left: 7rem;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.middle_section {
+    padding: 5rem 5rem 2rem 5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--clr-line);
+}
+
+
+.name {
+    font-size: 1.5rem;
+}
+
+span{
+    color: var(--clr-stats);
+    margin-left: .5rem;
+    font-weight: var(--fw-small);
+}
+
+.place {
+    margin-top: 1rem;
+}
+
+/* ============================================================================= */
+
+.last_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.value {
+    font-size: 1.2rem;
+}
+
+.about {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    margin-top: .5rem;
+}
